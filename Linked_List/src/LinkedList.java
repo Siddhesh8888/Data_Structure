@@ -203,5 +203,48 @@ public class LinkedList {
 		reverse(n2, n2.getNext());
 		n2.setNext(n1);
 	}
+	
+	public boolean insertAtBegining(int data)
+	{
+		Node newNode = new Node(data);
+		if(head==null)
+		{
+			head=newNode;
+			return true;
+		}
+		newNode.setNext(head);
+		head = newNode;
+		return true;
+		
+	}
+	
+	public boolean deleteAtFirst()
+	{
+		if(head==null)
+			return false;
+		
+		head = head.getNext();
+		return true;
+		
+	}
+	
+	public boolean deleteAtLast()
+	{
+		if(head==null)
+			return false;
+		
+		Node last=head,prev=head;
+		
+		while(last.getNext()!=null)
+		{
+			prev = last;
+			last = last.getNext();
+		}
+		
+		prev.setNext(null);
+		return true;
+	}
+	
+	
 
 }
