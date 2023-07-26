@@ -10,6 +10,16 @@ public class Main {
 		l1.insert(30);
 		l1.insert(40);
 		l1.display();
+		l1.insertAtBegining(50);
+		System.out.println("After adding at first : ");
+		l1.display();
+		l1.deleteAtFirst();
+		System.out.println("After deleting at first : ");
+		l1.display();
+		l1.deleteAtLast();
+		System.out.println("After deleting at last : ");
+		l1.display();
+		System.out.println("display list in reverse : ");
 		l1.displayRev();
 		System.out.println("display list in reverse : ");
 		l1.displayRev(l1.getHead()); //display list in reverse direction by using recursion
@@ -18,6 +28,7 @@ public class Main {
 		l1.display();
 		
 		l1.deleteByValue(30);//delete node on the basis of value
+		System.out.println("After deleting by value : ");
 		l1.display();
 		l1.reverse();
 		System.out.println("reverse list");
